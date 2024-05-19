@@ -33,6 +33,11 @@ The python script reads a hex file and transforms into the relevant ASCII code. 
  > Note: Please replace values e-g, secrets appropriately before running the script.
  ```
  LOG_LEVEL="DEBUG"
+ INPUT_DIRECTORY_PATH="backend/input"
+ OUTPUT_DIRECTORY_PATH="backend/output"
+ INPUT_FILE="logi.bin"
+ OUTPUT_FILE="logi_output.csv"
+ CHUNK_SIZE=4
  ```
 
  ## How to run the script
