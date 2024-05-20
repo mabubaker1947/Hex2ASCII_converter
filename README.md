@@ -1,5 +1,7 @@
-# Hex2ASCII_converter
-The python script reads a hex file and transforms into the relevant ASCII code. Input Format: PayloadHeader + Sequence Number + Message. 
+# bin2ASCII_converter
+The python script reads a hex/binary files and transforms into the relevant ASCII code and outputs in a CSV file. 
+Input Format: Binary file data: PayloadHeader + Sequence Number + Message. 
+Output format CSV file: PayloadHeader, Sequence Number, Message.
 
 
 ## Pre-requisits:
@@ -50,3 +52,24 @@ The python script reads a hex file and transforms into the relevant ASCII code. 
  ```
  python  src/backend/main.py
  ```
+
+ ## How to run the Unit Tests
+ Run the command below to execute the unit test scripts for the relevant files.
+ > Note: Adjust the path to the <test_files>.py depending on your current working directory on terminal.
+
+ Run tests:
+ ```
+ python  src/backend/Test_file_handler.py
+ ```
+ This should display results in the console as below.
+ ```
+   $ python src/backend/Test_file_handler.py 
+   ......
+   ----------------------------------------------------------------------
+   Ran 6 tests in 0.004s
+
+   OK
+ ```
+
+ ## Dockerised container for running as a crone job
+ This script can run in a dockerised container on cloud and also could be scheduled to run at an internal via the crone jobs. The `Dockerfile` file provided along this repository could be used as is to spin up a container in any docker supported environments.
