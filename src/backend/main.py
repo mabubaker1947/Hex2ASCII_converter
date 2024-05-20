@@ -1,24 +1,20 @@
-import os
+import os, time
 from decouple import config
-from file_handler import process_binary_files_data
-
+from file_handler import process_files_data
+from shared_utility import logger
 
 
 def main():
     '''
-    Entry point to the software. Invokes binary to ASCII converter functionality
+    Entry point to the software.\n Invokes file handing and the binary to ASCII converter functionality.
     '''
     try:
-        process_binary_files_data()
+        logger.info("Processing binary files started.")
+        process_files_data()
     except Exception as e:
-        print(e)
-
-
+        logger.info(e)
 
 if __name__=="__main__":
+    start_time = time.time()
     main()
-
-    # TODO:
-    # add support to export in multiple files extensions
-    # add logging capabilities
-    # add unit tests
+    logger.info("Total execution time in seconds \t:  "+str(time.time() -start_time))

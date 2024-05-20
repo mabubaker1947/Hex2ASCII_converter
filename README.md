@@ -32,12 +32,14 @@ The python script reads a hex file and transforms into the relevant ASCII code. 
  Create a `.env` file in this same directory where this `README.md` file is placed. Add the following environment variables into the file as they are needed to run the script.
  > Note: Please replace values e-g, secrets appropriately before running the script.
  ```
- LOG_LEVEL="DEBUG"
- INPUT_DIRECTORY_PATH="backend/input"
- OUTPUT_DIRECTORY_PATH="backend/output"
- INPUT_FILE="logi.bin"
- OUTPUT_FILE="logi_output.csv"
- CHUNK_SIZE=4
+    LOG_LEVEL="DEBUG"
+    DATA_FOLDER_LOCATION="src/data"
+    INPUT_DIRECTORY_PATH="src/data/input"
+    OUTPUT_DIRECTORY_PATH="src/data/output"
+    FAILED_OUTPUT_DIRECTORY_PATH="src/data/failed"
+    INPUT_FILE_EXTENSION=".bin"
+    OUTPUT_FILE_EXTENSION=".csv"
+    CHUNK_SIZE=4
  ```
 
  ## How to run the script
