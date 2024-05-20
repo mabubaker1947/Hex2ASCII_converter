@@ -52,6 +52,12 @@ Output format CSV file: PayloadHeader, Sequence Number, Message.
  ```
  python  src/backend/main.py
  ```
+<img width="424" alt="Screenshot 2024-05-20 at 5 49 42 p m" src="https://github.com/mabubaker1947/Hex2ASCII_converter/assets/7279385/f0a1bb87-0c51-47e9-b8ac-97d4cd8bb202">
+
+ Place your input files in the `src/data/input` folder. After processing the script produces an output csv file format against each source file. The output files are placed in the `src/data/output` directory and are named as current timestamp_<original_file>.csv. The files that cannot be processed are moved to the `src/data/failed` directory. 
+
+ ## Logging
+ The script is equipped with the logging capabilities. The logs are produced at Info level by default, otherwise specified in the `.env` file. The output logs are placed under `src/data/logs` directroy. This directory automatically gets created if not present already.
 
  ## How to run the Unit Tests
  Run the command below to execute the unit test scripts for the relevant files.
