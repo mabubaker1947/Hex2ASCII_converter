@@ -12,7 +12,7 @@ def main():
         logger.info("Processing binary files started.")
         process_files_data()
     except Exception as e:
-        logger.info(e)
+        logger.error(e)
 
 if __name__=="__main__":
     start_time = time.time()
